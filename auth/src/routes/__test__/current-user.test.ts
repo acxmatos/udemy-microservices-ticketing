@@ -8,7 +8,8 @@ it("responds with details about the current user", async () => {
     .get("/api/users/currentuser")
     .set("Cookie", cookie)
     .send()
-    .expect(200);
+    //.expect(200);
+    .expect(400); // forcing test to break!
 
   expect(response.body.currentUser.email).toEqual("test@test.com");
 });
