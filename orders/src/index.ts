@@ -10,8 +10,6 @@ import { PaymentCreatedListener } from "./events/listeners/payment-created-liste
 // Created a separated function to use async/await in old versions of Node
 // New versions allow to use await on a top level (no need to use a function)
 const start = async () => {
-  console.log("Starting up....");
-  
   if (!process.env.JWT_KEY) {
     throw new Error("JWT_KEY must be defined");
   }
@@ -69,6 +67,7 @@ const start = async () => {
   }
 
   app.listen(3000, () => {
+    console.log("This is the final version (finally!!!)");
     console.log("Listening on port 3000");
   });
 };

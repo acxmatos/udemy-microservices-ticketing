@@ -36,6 +36,8 @@ const start = async () => {
     //
     // Listeners
     new OrderCreatedListener(natsWrapper.client).listen();
+    
+    console.log("This is the final version (finally!!!)");
   } catch (err) {
     console.error(err);
   }
