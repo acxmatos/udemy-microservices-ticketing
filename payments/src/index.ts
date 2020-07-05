@@ -67,6 +67,7 @@ const start = async () => {
   }
 
   app.listen(3000, () => {
+    console.log("This is the final version (finally!!!)");
     console.log("Listening on port 3000");
   });
 };
